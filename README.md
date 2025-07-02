@@ -1,12 +1,12 @@
-# excel-to-spss-breast-risk
+# Excel-To-SPSS-Breast-Risk-Analysis
 
-_Hands-on practice for an entry-level research data-analyst role (Athena Breast Health Network / WISDOM Study)._
+_Project demonstrating the creation of a synthetic breast cancer screening dataset in Excel, followed by statistical analysis in SPSS._
 
 The repo walks through:
 
 1. **Building a synthetic breast-cancer-screening dataset** in **Excel**
 2. **Importing that dataset into SPSS**
-3. Running a **basic analysis pipeline** that mirrors what a UCSF Athena analyst might do.
+3. Running a **basic analysis pipeline** that simulates real-world screening workflows
 
 ---
 
