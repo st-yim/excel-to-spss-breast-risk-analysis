@@ -21,7 +21,7 @@ The repo walks through:
 | `FamilyHistory` | text | Yes / No | `=IF(RAND()<0.3,"Yes","No")` (≈ 30 % have FH +) |
 | `RiskScore` | decimal ( % ) | 18.4 | `=ROUND(RAND()*25+5,1)` → 5 – 30 % |
 | `RiskCategory` | text | Average / Intermediate / High | `IFS(RiskScore<15,"Average", RiskScore<20,"Intermediate", TRUE,"High")` |
-| `ScreeningRec` | text | Annual mammogram + MRI | Nested `IF` based on `RiskCategory` |
+| `ScreeningRec` | text | Annual mammogram + MRI | `=IF(RiskCategory="High", "Annual mammogram + MRI", IF(RiskCategory="Intermediate", "Annual mammogram", "Mammogram at age >= 40"))` |
 
 ### 1.2 Why these ranges?
 
