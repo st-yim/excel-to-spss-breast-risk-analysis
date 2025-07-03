@@ -83,8 +83,10 @@ For each additional year of age, the model estimates a **+0.21%** increase in ri
 
 Key plots and regression tables have been exported to the [`figures/`](../figures) folder:
 
-- `risk_distribution.png` – Crosstab bar chart  
-- `regression_output.png` – Coefficients table from linear regression  
+![Risk distribution](../figures/risk_bar_chart.png)
+
+![Regression output](../figures/regression_coefficients.png)
+
 
 ---
 
