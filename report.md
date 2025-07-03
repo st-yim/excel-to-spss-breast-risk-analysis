@@ -6,7 +6,7 @@ _This report summarizes findings from a synthetic breast cancer screening datase
 
 ## 📁 Dataset Overview
 
-The dataset used in this analysis is included in [`data/BreastRiskData.xlsx`](../data/BreastRiskData.xlsx).  
+The dataset used in this analysis is included in [`data/BreastRiskData.xlsx`](/data/BreastRiskData.xlsx).  
 See the `README.md` for full details on how the data were constructed and recoded.
 
 | Variable Name         | Label                                 | Type     | Notes                                  |
@@ -81,11 +81,15 @@ For each additional year of age, the model estimates a **+0.21%** increase in ri
 
 ## 🖼️ Figures
 
-Key plots and regression tables have been exported to the [`figures/`](../figures) folder:
+Key plots and regression tables have been exported to the [`figures/`](/figures) folder:
 
-![Risk distribution](../figures/risk_bar_chart.png)
+### Risk-category distribution  
+![Risk distribution](figures/risk_bar_chart.png)
 
-![Regression output](../figures/regression_coefficients.png)
+<br><br>
+
+### Regression coefficients  
+![Regression output](figures/regression_coefficients.png)
 
 
 ---
