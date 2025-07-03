@@ -1,0 +1,20 @@
+PatientID,Age,FamilyHistory (Yes/No),RiskScore (%),RiskCategory,ScreeningRecommendation
+P001,40,No,7,Average,Mammogram at age >= 40
+P002,69,No,13.8,Average,Mammogram at age >= 40
+P003,35,Yes,5.2,Average,Mammogram at age >= 40
+P004,51,No,18.3,Intermediate,Annual mammogram
+P005,62,Yes,14.9,Average,Mammogram at age >= 40
+P006,55,Yes,22.6,High,Annual mammogram + MRI
+P007,43,Yes,16.7,Intermediate,Annual mammogram
+P008,38,No,19,Intermediate,Annual mammogram
+P009,62,Yes,27.2,High,Annual mammogram + MRI
+P010,61,No,13.5,Average,Mammogram at age >= 40
+P011,42,Yes,11.8,Average,Mammogram at age >= 40
+P012,36,No,10.7,Average,Mammogram at age >= 40
+P013,34,No,19.3,Intermediate,Annual mammogram
+P014,64,Yes,20.5,High,Annual mammogram + MRI
+P015,54,No,10.4,Average,Mammogram at age >= 40
+P016,40,No,16.2,Intermediate,Annual mammogram
+P017,58,Yes,27.5,High,Annual mammogram + MRI
+P018,66,No,17.3,Intermediate,Annual mammogram
+P019,55,Yes,20.7,High,Annual mammogram + MRI
