@@ -60,33 +60,38 @@ Outputs saved to `output/`.
 
 ```
 ├── data/
-│ ├── BreastRiskData.xlsx # original synthetic Excel file
-│ └── BreastRiskData_cleaned.sav # SPSS dataset after recodes
+│   ├── BreastRiskData.xlsx            # Original synthetic Excel dataset
+│   └── BreastRiskData_cleaned.sav     # Cleaned SPSS dataset after recoding
 ├── scripts/
-│ └── analysis.sps # SPSS syntax: recodes, descriptives, crosstabs, regression
+│   ├── 01_cleaning.sps                # SPSS syntax for recoding variables, value labels
+│   └── 02_analysis.sps                # SPSS syntax for descriptives, crosstabs, regression
 ├── figures/
-│ ├── risk_distribution.png # exported bar/box plots
-│ └── regression_output.png # exported coefficients table
+│   ├── risk_distribution.png          # Exported bar or box plot of risk categories
+│   └── regression_output.png          # Screenshot of regression coefficients table
 ├── output/
-│ └── BreastRisk_output.spv # SPSS Viewer file (optional, binary)
-├── report.md # narrative findings write-up
-└── README.md # you’re here
+│   └── BreastRisk_output.spv          # SPSS output file (viewer format, binary)
+├── report.md                          # Written summary of analysis findings and interpretation
+└── README.md                          # You’re here — project overview and instructions
 ```
 
 ---
 
-## 4 · New SPSS steps added (2025-07-02)
+## 4 · SPSS Analysis Pipeline Overview
 
-| Step | What was done | Where captured |
-|------|---------------|----------------|
-| **Import Excel → SPSS** | `File ▸ Open ▸ Data…` → imported **BreastRiskData.xlsx** into SPSS. | Start of `analysis.sps` |
-| **Variable renaming & recoding** | - Renamed variables to tidy snake-case.<br>- Re-coded **FamilyHistory** “Yes/No” → 1/0.<br>- Re-coded **RiskCategory** *Average/Intermediate/High* → 1/2/3 (ordinal). | `analysis.sps` (section 1) |
-| **Descriptives & Crosstab** | - Frequencies & descriptives for age, risk score.<br>- Crosstab + χ² for *FamilyHistory × RiskCategory*. | `analysis.sps` (section 2) |
-| **Linear regression** | Modeled `risk_score` using `age`, `family_history`, `risk_category`. | `analysis.sps` (section 3) |
-| **Figures exported** | Saved key plots/tables as PNG to **figures/** for use in the Markdown report. | `figures/` |
-| **Write-up** | Summarised methods, key statistics, and interpretation. | `report.md` |
+| Step                     | What Was Done                                                                                                                                  | Where Captured                |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| **Import Excel → SPSS** | Opened `File ▸ Open ▸ Data…` and imported **BreastRiskData.xlsx** into SPSS.                                                                  | Start of `scripts/01_cleaning.sps` |
+| **Variable renaming & recoding** | - Renamed variables to tidy snake_case.  
+| Re-coded **FamilyHistory** from “Yes/No” to 1/0.  
+| Re-coded **RiskCategory** from Average/Intermediate/High to 1/2/3 (ordinal). | `scripts/01_cleaning.sps`     |
+| **Descriptives & Crosstabs** | - Ran frequencies and descriptives for `age` and `risk_score`.  
+| Crosstab + chi-square test for `family_history × risk_category`.                            | `scripts/02_analysis.sps`     |
+| **Linear regression**    | Modeled `risk_score` as a function of `age`, `family_history`, and `risk_category`.                                                          | `scripts/02_analysis.sps`     |
+| **Figures exported**     | Exported bar plots and regression output as PNGs for use in report.                                                                          | `figures/`                    |
+| **Write-up**             | Summarized steps, findings, and interpretation.                                                                                              | `report.md`                   |
+
 
 > **Re-run the analysis:**  
-> 1. Open **scripts/analysis.sps** in IBM SPSS Statistics.  
+> 1. Open **scripts/02_analysis.sps** in IBM SPSS Statistics.  
 > 2. Ensure `data/BreastRiskData_cleaned.sav` is present.  
 > 3. Choose **Run ▸ All** to reproduce every table and figure.
