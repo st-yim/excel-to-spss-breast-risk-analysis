@@ -1,6 +1,8 @@
 # Excel-To-SPSS-Breast-Risk-Analysis
 
-_Project demonstrating the creation of a synthetic breast cancer screening dataset in Excel, followed by statistical analysis in SPSS._
+_Project demonstrating the creation of a breast cancer screening dataset in Excel, followed by statistical analysis in SPSS._
+
+> **Note**: This project uses *synthetic breast cancer screening data* created for demonstration purposes; it contains no real patient records.
 
 The repo walks through:
 
